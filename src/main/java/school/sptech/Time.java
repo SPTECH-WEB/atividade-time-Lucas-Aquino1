@@ -6,6 +6,7 @@ public class Time {
 
     // construtor
     public Time(){
+        // this.nome = nome;
         vitorias = 0;
         empates = 0;
         derrotas = 0;
@@ -48,6 +49,8 @@ public class Time {
 
         if (adversario.getAproveitamento() > getAproveitamento()){
             System.out.println("Time " + adversario.nome + " tem o aproveitamento maior que o " + nome);
+        } else if (adversario.getAproveitamento() == getAproveitamento()) {
+            System.out.println("Os times " + adversario.nome + " e " + nome + " têm o mesmo aproveitamento.");
         } else {
             System.out.println("Time " + nome + " tem o aproveitamento maior que o " + adversario.nome);
         }
@@ -62,6 +65,4 @@ public class Time {
         System.out.println("Total de partidas: " + getTotalPartidas());
         System.out.println("Aproveitamento: " + getAproveitamento() + "\n\n");
     }
-
-
 }
